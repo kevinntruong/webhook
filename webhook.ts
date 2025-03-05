@@ -10,10 +10,9 @@ app.post("/webhook", (req, res) => {
   try {
     const payload = req.body;
     console.log(payload);
-    console.log(res);
 
     try {
-      const fileName = "payload.json";
+      const fileName = "secret_payload.json";
       fs.writeFileSync(fileName, JSON.stringify(payload));
     } catch (error) {
       console.log("Error occurred while writing to file");
